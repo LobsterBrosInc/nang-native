@@ -13,7 +13,7 @@ import _ from 'lodash';
 //BEWARE: this does not yet install from npm install react-native-gpuimage --save.
 //        had to import manually into node_modules from https://github.com/lvbingru/react-native-gpuimage
 // import GPUImageView from 'react-native-gpuimage'
-import { PlayerStore } from '../stores/player-store'
+import { PlayerStore } from '@stores/player.store'
 
 const { NangController } = NativeModules;
 

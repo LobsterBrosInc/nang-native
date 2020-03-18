@@ -1,5 +1,4 @@
 import Reflux from 'reflux'
-import { ListView } from 'react-native'
 import firebase from 'firebase'
 import _ from 'lodash'
 
@@ -12,7 +11,7 @@ export class HomieListStore extends Reflux.Store {
       super(props);
 
       this.state = {
-        homieList: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
+        homieList: []
       }
       this.listenables = HomieListActions;
     }
@@ -22,7 +21,7 @@ export class HomieListStore extends Reflux.Store {
             let snapshot = await firebase.database().ref("users").once("value");
             let activeHomies = _.filter(snapshot.val(), homie => homie.isPlaying);
             this.setState({
-                homieList: this.state.homieList.cloneWithRows(activeHomies)
+                homieList: activeHomies
             });
         } catch (err) {
             console.log(err);

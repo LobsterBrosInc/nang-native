@@ -2,16 +2,14 @@ import React from 'react';
 import Reflux from 'reflux';
 import {
   View,
-  ListView,
+  FlatList,
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
 
-import BurgerButton from './BurgerButton';
-import HomieListItem from './HomieListItem';
-import LstnToHomie from './LstnToHomie';
+import { BurgerButton, HomieListItem } from '@components';
 
-import { HomieListStore, HomieListActions } from '../stores/homie-list-store';
+import { HomieListStore, HomieListActions } from '@stores/homieList.store';
 
 export default class HomieListView extends Reflux.Component {
     constructor(props) {
@@ -34,11 +32,11 @@ export default class HomieListView extends Reflux.Component {
         return (
             <View>
                 <BurgerButton openDrawer={ ()=>this.props.navigation.openDrawer() }/>
-                <ListView
+                <FlatList
                     style={styles.listView}
-                    dataSource={this.state.homieList}
+                    data={this.state.homieList}
                     enableEmptySections={true}
-                    renderRow={(homie) => {
+                    renderItem={(homie) => {
                         return (
                             <TouchableOpacity onPress={()=>this._lstnToHomie(homie)}>
                                 <HomieListItem homie={homie} />

@@ -7,9 +7,8 @@ import {
     ActivityIndicator
 } from 'react-native'
 
-import BurgerButton from './BurgerButton'
-import AlbumArt from './AlbumArt'
-import { PlayerActions } from '../stores/player-store'
+import { BurgerButton, AlbumArt } from '@components'
+import { PlayerActions } from '@stores/player.store'
 
 import firebase from 'firebase'
 import _ from 'lodash'

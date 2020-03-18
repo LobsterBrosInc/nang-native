@@ -7,7 +7,7 @@ import {
   AsyncStorage
 } from 'react-native'
 
-import LstnText from './LstnText'
+import LstnText from '@components/LstnText'
 
 export default class HomieListItem extends React.Component {
     static propTypes = {

@@ -11,7 +11,7 @@ const BurgerButton = (props)  =>
         <Image
             style={styles.burger}
             resizeMode="contain"
-            source={{uri:'burger', isStatic: true}}
+            source={require('@assets/pics/burger.png')}
         />
     </TouchableOpacity>;
 
@@ -23,8 +23,8 @@ let styles = StyleSheet.create({
     burger: {
         height: 30,
         width: 30,
-        top: 25,
-        right: 5,
+        top: 40,
+        right: 10,
         alignSelf: 'flex-end'
     }
 });

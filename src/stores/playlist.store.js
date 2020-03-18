@@ -1,6 +1,5 @@
 import Reflux from 'reflux'
 import {
-    ListView,
     AsyncStorage
 } from 'react-native'
 
@@ -14,7 +13,7 @@ export class PlaylistStore extends Reflux.Store {
       super(props);
 
       this.state = {
-        playlistList: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
+        playlistList: []
       };
       this.listenables = PlaylistActions;
     }
@@ -34,10 +33,10 @@ export class PlaylistStore extends Reflux.Store {
                     Authorization: 'Bearer ' + accessToken
                 }
             });
-            let json = await response.json();
+            let { items } = await response.json();
             this.setState({
                 loading: false,
-                playlistList: this.state.playlistList.cloneWithRows(json.items)
+                playlistList: items
             });
         } catch (err) {
             console.log(err);

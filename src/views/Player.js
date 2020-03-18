@@ -8,10 +8,9 @@ import {
     NativeEventEmitter
 } from 'react-native';
 
-import BurgerButton from './BurgerButton'
-import AlbumArt from './AlbumArt'
+import { BurgerButton, AlbumArt } from '@components'
 
-import { PlayerStore, PlayerActions } from '../stores/player-store'
+import { PlayerStore, PlayerActions } from '@stores/player.store'
 import _ from 'lodash'
 
 let { NangController } = NativeModules;

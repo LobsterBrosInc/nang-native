@@ -3,7 +3,7 @@ import Reflux from 'reflux';
 
 import {
   View,
-  ListView,
+  FlatList,
   StyleSheet,
   NativeModules,
   TouchableOpacity
@@ -11,11 +11,10 @@ import {
 
 const { NangController } = NativeModules;
 
-import BurgerButton from './BurgerButton'
-import LstnText from './LstnText'
+import { BurgerButton, LstnText } from '@components'
 
-import { PlayerActions } from '../stores/player-store'
-import { TrackListStore, TrackListActions } from '../stores/track-list-store';
+import { PlayerActions } from '@stores/player.store'
+import { TrackListStore, TrackListActions } from '@stores/trackList.store';
 
 
 export default class TrackListView extends Reflux.Component {
@@ -26,7 +25,7 @@ export default class TrackListView extends Reflux.Component {
     }
 
     componentDidMount() {
-        const playlistTracksHref = this.props.navigation.getParam('playlistTracksHref');
+        const playlistTracksHref = this.props.route['params'] && this.props.route.params['playlistTracksHref'];
         TrackListActions.getInitialTracks(playlistTracksHref || `https://api.spotify.com/v1/me/tracks?limit=50`);
     }
 
@@ -40,12 +39,12 @@ export default class TrackListView extends Reflux.Component {
         return (
             <View style={styles.view}>
                 <BurgerButton openDrawer={()=>this.props.navigation.openDrawer()}/>
-                <ListView
+                <FlatList
                     style={styles.listView}
-                    dataSource={this.state.trackList}
+                    data={this.state.trackList}
                     enableEmptySections={true}
                     onEndReached={TrackListActions.getMoreTracks}
-                    renderRow={(item, sectionId, index) => {
+                    renderItem={(item, sectionId, index) => {
                         return (
                             <TouchableOpacity  onPress={()=>this._lstnToTrack(index)}>
                                 <View style={styles.listItem}>

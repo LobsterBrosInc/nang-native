@@ -1,6 +1,5 @@
 import Reflux from 'reflux'
 import {
-    ListView,
     AsyncStorage
 } from 'react-native'
 
@@ -15,7 +14,7 @@ export class TrackListStore extends Reflux.Store {
 
         this.state = {
             loading: false,
-            trackList: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
+            trackList: [],
             currentTrackIds: [],
             trackData: [],
         }
@@ -26,7 +25,7 @@ export class TrackListStore extends Reflux.Store {
     onGetInitialTracks(tracksURL){
         this.setState({
             nextTracksURL: tracksURL,
-            trackList: this.state.trackList.cloneWithRows([]),
+            trackList: [],
             trackData: []
         });
         this._fetchTracks();
@@ -61,7 +60,7 @@ export class TrackListStore extends Reflux.Store {
             loading: false,
             nextTracksURL: json.next,
             trackData: newTrackData,
-            trackList: this.state.trackList.cloneWithRows(newTrackData),
+            trackList: newTrackData,
             currentTrackIds: this.state.currentTrackIds.concat(json.items.map(item => item.track.id))
         });
     }

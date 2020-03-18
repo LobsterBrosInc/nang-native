@@ -9,7 +9,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import { PlayerStore } from '../stores/player-store';
+import { PlayerStore } from '@stores/player.store';
 
 export default class PlayerButton extends Reflux.Component {
     static propTypes = {

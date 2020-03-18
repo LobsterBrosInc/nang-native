@@ -5,18 +5,16 @@ import _ from 'lodash';
 import {
   Dimensions,
   View,
-  ListView,
+  FlatList,
   TextInput,
   StyleSheet,
   TouchableOpacity,
   Image
 } from 'react-native';
 
-import AlbumArt from './AlbumArt';
-import BurgerButton from './BurgerButton';
-import LstnText from './LstnText';
+import { BurgerButton, LstnText } from '@components'
 
-import { SearchStore, SearchActions } from '../stores/search-store';
+import { SearchStore, SearchActions } from '@stores/search.store';
 
 export default class SearchView extends Reflux.Component {
     constructor(props) {
@@ -45,12 +43,12 @@ export default class SearchView extends Reflux.Component {
                     autoCapitalize="none"
                     onChangeText={ query => SearchActions.getSearchResults(query) }
                 ></TextInput>
-                <ListView
+                <FlatList
                     style={styles.listView}
-                    dataSource={this.state.trackList}
+                    data={this.state.trackList}
                     enableEmptySections={true}
                     onEndReached={SearchActions.getMoreTracks}
-                    renderRow={(item, sectionId, index) => {
+                    renderItem={(item, sectionId, index) => {
                         return (
                             <View style={styles.listItem}>
                                 <TouchableOpacity  onPress={()=>this._lstnToTrack(index)}>

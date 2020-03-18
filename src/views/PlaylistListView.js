@@ -2,16 +2,14 @@ import Reflux from 'reflux';
 import React from 'react';
 import {
   View,
-  ListView,
+  FlatList,
   StyleSheet,
   TouchableOpacity
 } from 'react-native';
 
-import TrackListView from './TrackListView'
-import BurgerButton from './BurgerButton'
-import LstnText from './LstnText'
+import { BurgerButton, LstnText } from '@components'
 
-import { PlaylistStore, PlaylistActions } from '../stores/playlist-store';
+import { PlaylistStore, PlaylistActions } from '@stores/playlist.store';
 
 export default class PlaylistListView extends Reflux.Component {
     constructor(props) {
@@ -34,11 +32,11 @@ export default class PlaylistListView extends Reflux.Component {
         return (
             <View style={styles.view}>
                 <BurgerButton openDrawer={()=>this.props.navigation.openDrawer()}/>
-                <ListView
+                <FlatList
                     style={styles.listView}
-                    dataSource={this.state.playlistList}
+                    data={this.state.playlistList}
                     enableEmptySections={true}
-                    renderRow={(item, sectionId, index) => {
+                    renderItem={(item, sectionId, index) => {
                         return (
                             <TouchableOpacity onPress={()=>this._goToPlaylist(item.tracks.href)}>
                                 <View style={styles.listItem}>

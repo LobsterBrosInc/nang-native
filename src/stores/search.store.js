@@ -1,5 +1,4 @@
 import {
-    ListView,
     AsyncStorage
 } from 'react-native'
 
@@ -18,7 +17,7 @@ export class SearchStore extends  Reflux.Store {
 
       this.state = {
           loading: false,
-          trackList: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
+          trackList: [],
           currentTrackIds: [],
           trackData: [],
       }
@@ -32,7 +31,7 @@ export class SearchStore extends  Reflux.Store {
             this._fetchQueryDebounce(query);
         } else {
             // clear list
-            this.setState({trackList: this.state.trackList.cloneWithRows([])});
+            this.setState({trackList: []});
         }
     }
 
@@ -59,7 +58,7 @@ export class SearchStore extends  Reflux.Store {
     _fetchQuery (query) {
         this.setState({
             nextTracksURL: `https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track`,
-            trackList: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
+            trackList: [],
             currentTrackIds: [],
             trackData: []
         });
@@ -90,7 +89,7 @@ export class SearchStore extends  Reflux.Store {
             loading: false,
             nextTracksURL: tracks.next,
             trackData: newTrackData,
-            trackList: this.state.trackList.cloneWithRows(newTrackData),
+            trackList: newTrackData,
             currentTrackIds: this.state.currentTrackIds.concat(tracks.items.map(item => item.id))
         });
     }

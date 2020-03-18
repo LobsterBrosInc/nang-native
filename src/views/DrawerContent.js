@@ -6,7 +6,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import PlayerButton from './PlayerButton';
+import { PlayerButton } from '@components';
 
 export default class DrawerContent extends React.Component {
     constructor(props) {
