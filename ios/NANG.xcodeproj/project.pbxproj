@@ -18,8 +18,11 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* NANGTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NANGTests.m */; };
 		32C5D0A603F31533157A95B2 /* libPods-NANGTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B735CEB2B3CCAB1FDE4214 /* libPods-NANGTests.a */; };
+		9E2A2B7E91CB46FE9CBAEA2E /* PressStart2P-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B89DE2DBBD6F4DFFAC46DA25 /* PressStart2P-Regular.ttf */; };
 		ABBD1D6631786D24653A42D9 /* libPods-NANG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEB8F0EF199855F85FC9126 /* libPods-NANG-tvOS.a */; };
 		C69FF7A6C059E7E4CA24F1C1 /* libPods-NANG-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A514FFAA2AE7ACB8D5058EA /* libPods-NANG-tvOSTests.a */; };
+		DB5424E023527C150045974B /* NangController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5424DF23527C150045974B /* NangController.swift */; };
+		DB5424E223527D6A0045974B /* NangController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5424E123527D6A0045974B /* NangController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +64,12 @@
 		78B735CEB2B3CCAB1FDE4214 /* libPods-NANGTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NANGTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		848925B1FEE391217E41808C /* Pods-NANG-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NANG-tvOS.release.xcconfig"; path = "Target Support Files/Pods-NANG-tvOS/Pods-NANG-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A514FFAA2AE7ACB8D5058EA /* libPods-NANG-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NANG-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89DE2DBBD6F4DFFAC46DA25 /* PressStart2P-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PressStart2P-Regular.ttf"; path = "../src/assets/fonts/PressStart2P/PressStart2P-Regular.ttf"; sourceTree = "<group>"; };
 		CEF829BE223E5B6BD0CF9268 /* Pods-NANG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NANG.release.xcconfig"; path = "Target Support Files/Pods-NANG/Pods-NANG.release.xcconfig"; sourceTree = "<group>"; };
+		DB5424DE23527C150045974B /* NANG-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NANG-Bridging-Header.h"; sourceTree = "<group>"; };
+		DB5424DF23527C150045974B /* NangController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NangController.swift; sourceTree = "<group>"; };
+		DB5424E123527D6A0045974B /* NangController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NangController.m; sourceTree = "<group>"; };
+		DB98D6B1235286FE00032273 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "../../../Downloads/ios-sdk-1.0.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
 		DC63D78EA46380C2A1B74F7C /* libPods-NANG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NANG.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB6D27749ED66CF86425B14 /* Pods-NANG-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NANG-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NANG-tvOSTests/Pods-NANG-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -132,6 +140,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				DB5424DF23527C150045974B /* NangController.swift */,
+				DB5424E123527D6A0045974B /* NangController.m */,
+				DB5424DE23527C150045974B /* NANG-Bridging-Header.h */,
 			);
 			name = NANG;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB98D6B1235286FE00032273 /* SpotifyiOS.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				DC63D78EA46380C2A1B74F7C /* libPods-NANG.a */,
@@ -165,6 +177,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				FB2A9A39F11A6A157C13749B /* Pods */,
+				9F0299A6D7FC447988B31A2A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -182,6 +195,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9F0299A6D7FC447988B31A2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B89DE2DBBD6F4DFFAC46DA25 /* PressStart2P-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		FB2A9A39F11A6A157C13749B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +215,6 @@
 				0049398134DA8C2CD799C934 /* Pods-NANGTests.debug.xcconfig */,
 				05BE0A21094EC78B18F51ED0 /* Pods-NANGTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -285,12 +305,16 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 5RY4WV5W2B;
+						LastSwiftMigration = 1010;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -338,6 +362,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				9E2A2B7E91CB46FE9CBAEA2E /* PressStart2P-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -529,7 +554,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				DB5424E023527C150045974B /* NangController.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				DB5424E223527D6A0045974B /* NangController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0049398134DA8C2CD799C934 /* Pods-NANGTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05BE0A21094EC78B18F51ED0 /* Pods-NANGTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = NANGTests/Info.plist;
@@ -626,8 +655,14 @@
 			baseConfigurationReference = 2AE7795D94C1B5FEF8543E22 /* Pods-NANG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 5RY4WV5W2B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NANG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -635,8 +670,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobsterbros.nang;
 				PRODUCT_NAME = NANG;
+				SWIFT_OBJC_BRIDGING_HEADER = "NANG-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,7 +684,13 @@
 			baseConfigurationReference = CEF829BE223E5B6BD0CF9268 /* Pods-NANG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5RY4WV5W2B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NANG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -654,8 +698,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobsterbros.nang;
 				PRODUCT_NAME = NANG;
+				SWIFT_OBJC_BRIDGING_HEADER = "NANG-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -865,6 +911,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

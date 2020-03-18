@@ -14,7 +14,10 @@ import {
   View,
   Text,
   StatusBar,
+  NativeModules
 } from 'react-native';
+
+const NangController = NativeModules['NangController'];
 
 import {
   Header,
