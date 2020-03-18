@@ -12,7 +12,7 @@ import {
   Image
 } from 'react-native';
 
-import { BurgerButton, LstnText } from '@components'
+import { BurgerButton, NangText } from '@components'
 
 import { SearchStore, SearchActions } from '@stores/search.store';
 
@@ -58,12 +58,12 @@ export default class SearchView extends Reflux.Component {
                                             source={{uri: _.get(item.album, 'images[1].url')}}
                                             resizeMode="cover"
                                         ></Image>
-                                        <LstnText text={`${item.name} λ ${_.get(item, 'artists[0].name')}`} style={{fontSize: 15, textAlign: 'center', color: '#F95300', backgroundColor: 'transparent'}}/>
+                                        <NangText text={`${item.name} λ ${_.get(item, 'artists[0].name')}`} style={{fontSize: 15, textAlign: 'center', color: '#F95300', backgroundColor: 'transparent'}}/>
                                     </View>
                                 </TouchableOpacity>
                                 <TouchableOpacity  onPress={()=> SearchActions.saveTrack(item.id) }>
                                     <View>
-                                        <LstnText text={'+'} style={{fontSize: 30, textAlign: 'center', width: 30, color: '#F95300', backgroundColor: 'transparent'}}/>
+                                        <NangText text={'+'} style={{fontSize: 30, textAlign: 'center', width: 30, color: '#F95300', backgroundColor: 'transparent'}}/>
                                     </View>
                                 </TouchableOpacity>
                             </View>

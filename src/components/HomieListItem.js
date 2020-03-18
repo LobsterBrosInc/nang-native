@@ -7,7 +7,7 @@ import {
   StyleSheet
 } from 'react-native'
 
-import LstnText from '@components/LstnText'
+import NangText from '@components/NangText'
 
 export default class HomieListItem extends React.Component {
     static propTypes = {
@@ -46,8 +46,8 @@ export default class HomieListItem extends React.Component {
     render() {
         return (
             <View style={styles.listItem}>
-                <LstnText text={this.props.homie.username} style={{fontSize: 15, textAlign: 'center'}}/>
-                <LstnText text={`${this.state.trackName} λ ${this.state.artistName}`}style={{fontSize: 13, textAlign: 'center'}}/>
+                <NangText text={this.props.homie.username} style={{fontSize: 15, textAlign: 'center'}}/>
+                <NangText text={`${this.state.trackName} λ ${this.state.artistName}`}style={{fontSize: 13, textAlign: 'center'}}/>
             </View>
         );
     }

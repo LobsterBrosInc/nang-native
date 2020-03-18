@@ -17,7 +17,7 @@ const { NangController } = NativeModules;
 const LstnEventEmitter = new NativeEventEmitter(NangController);
 
 import { UserStore, UserActions } from '@stores/user.store'
-import { LstnText } from '@components'
+import { NangText } from '@components'
 import _ from 'lodash'
 
 const buttonText = ["THEY AINT READY", "GET YO SHIT", "MTHRFCKRS NEED TO KNOW"][_.random(2)];
@@ -60,7 +60,7 @@ export default class LoginView extends Reflux.Component {
         return (
             <View style={styles.loginView}>
                 <Image
-                    source={require('@assets/pics/lstn-word-orange.png')}
+                    source={require('@assets/pics/nang-word-orange.png')}
                     style={styles.lstnLogo}
                     resizeMode="contain"
                 />
@@ -93,7 +93,7 @@ export default class LoginView extends Reflux.Component {
                         ></TextInput>
                         <TouchableOpacity onPress={UserActions.logUserIn}>
                             <View style={styles.loginButton}>
-                                <LstnText
+                                <NangText
                                     text={buttonText}
                                     style={{fontSize: 15, textAlign: 'center', lineHeight: 35, color: '#F95300'}}
                                 />

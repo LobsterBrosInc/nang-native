@@ -3,4 +3,4 @@
 //
 
 #import <React/RCTBridgeModule.h>
-//#import <SpotifyiOS/SpotifyiOS.h>
+#import <SpotifyiOS/SpotifyiOS.h>

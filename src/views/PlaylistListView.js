@@ -7,7 +7,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import { BurgerButton, LstnText } from '@components'
+import { BurgerButton, NangText } from '@components'
 
 import { PlaylistStore, PlaylistActions } from '@stores/playlist.store';
 
@@ -40,7 +40,7 @@ export default class PlaylistListView extends Reflux.Component {
                         return (
                             <TouchableOpacity onPress={()=>this._goToPlaylist(item.tracks.href)}>
                                 <View style={styles.listItem}>
-                                    <LstnText text={item.name} style={{fontSize: 15, textAlign: 'center'}}/>
+                                    <NangText text={item.name} style={{fontSize: 15, textAlign: 'center'}}/>
                                 </View>
                             </TouchableOpacity>
                         )}

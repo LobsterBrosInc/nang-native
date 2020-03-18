@@ -11,7 +11,7 @@ import {
 
 const { NangController } = NativeModules;
 
-import { BurgerButton, LstnText } from '@components'
+import { BurgerButton, NangText } from '@components'
 
 import { PlayerActions } from '@stores/player.store'
 import { TrackListStore, TrackListActions } from '@stores/trackList.store';
@@ -48,7 +48,7 @@ export default class TrackListView extends Reflux.Component {
                         return (
                             <TouchableOpacity  onPress={()=>this._lstnToTrack(index)}>
                                 <View style={styles.listItem}>
-                                    <LstnText text={item.track.name} style={{fontSize: 15, textAlign: 'center'}}/>
+                                    <NangText text={item.track.name} style={{fontSize: 15, textAlign: 'center'}}/>
                                 </View>
                             </TouchableOpacity>
                         )}

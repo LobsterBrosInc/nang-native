@@ -36,20 +36,5 @@ target 'NANG' do
 
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
-  target 'NANGTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
   use_native_modules!
-end
-
-target 'NANG-tvOS' do
-  # Pods for NANG-tvOS
-
-  target 'NANG-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
