@@ -1,7 +1,5 @@
 import Reflux from 'reflux'
-import {
-    AsyncStorage
-} from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 
 export const PlaylistActions = Reflux.createActions([
     "getInitialPlaylists",

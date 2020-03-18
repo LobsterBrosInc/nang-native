@@ -1,5 +1,5 @@
 import Reflux from 'reflux';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage'
 import { UserActions } from '@stores/user.store';
 import MusicControlService from '@services/musicControl.service';
 import _ from 'lodash';

@@ -1,13 +1,12 @@
 import React from 'react';
 import Reflux from 'reflux';
-
+import AsyncStorage from '@react-native-community/async-storage'
 import {
     View,
     Image,
     Text,
     TextInput,
     StyleSheet,
-    AsyncStorage,
     ActivityIndicator,
     TouchableOpacity,
     NativeModules,

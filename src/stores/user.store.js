@@ -1,10 +1,9 @@
-import Reflux from 'reflux';
+import Reflux from 'reflux'
 import firebase from 'firebase'
 
-import {
-    AsyncStorage,
-    NativeModules
-} from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage'
+
+import { NativeModules } from 'react-native';
 
 
 const NangController = NativeModules.NangController;

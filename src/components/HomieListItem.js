@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import AsyncStorage from '@react-native-community/async-storage'
 
 import {
   View,
-  StyleSheet,
-  AsyncStorage
+  StyleSheet
 } from 'react-native'
 
 import LstnText from '@components/LstnText'

@@ -1,6 +1,7 @@
 import _ from 'lodash';
+import AsyncStorage from '@react-native-community/async-storage'
 import MusicControl from 'react-native-music-control';
-import { AsyncStorage, NativeModules } from 'react-native';
+import { NativeModules } from 'react-native';
 const { NangController } = NativeModules;
 
 export default class MusicControlService {
